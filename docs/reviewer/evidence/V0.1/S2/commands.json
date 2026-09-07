@@ -1,0 +1,80 @@
+[
+  {
+    "label": "cli-v1-1",
+    "argv": [
+      "/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/reviewer/venv/bin/python",
+      "-m",
+      "minigenesis",
+      "--config",
+      "examples/v0.1/s1-baseline.yaml",
+      "--output-format",
+      "json"
+    ],
+    "exit": 0,
+    "stdout_sha256": "4de55827ebbd9719a6bc42d8f426cf72307a0172603c3ba0090c2bbe166f6b34"
+  },
+  {
+    "label": "cli-v1-2",
+    "argv": [
+      "/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/reviewer/venv/bin/python",
+      "-m",
+      "minigenesis",
+      "--config",
+      "examples/v0.1/s1-baseline.yaml",
+      "--output-format",
+      "json"
+    ],
+    "exit": 0,
+    "stdout_sha256": "4de55827ebbd9719a6bc42d8f426cf72307a0172603c3ba0090c2bbe166f6b34"
+  },
+  {
+    "label": "cli-v2-1",
+    "argv": [
+      "/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/reviewer/venv/bin/python",
+      "-m",
+      "minigenesis",
+      "--config",
+      "examples/v0.1/s2-resource-world.yaml",
+      "--output-format",
+      "json"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e09a9aeb8e105b75efac9086d5b60717cc3c605078108c17f193e323724adb9e"
+  },
+  {
+    "label": "cli-v2-2",
+    "argv": [
+      "/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/reviewer/venv/bin/python",
+      "-m",
+      "minigenesis",
+      "--config",
+      "examples/v0.1/s2-resource-world.yaml",
+      "--output-format",
+      "json"
+    ],
+    "exit": 0,
+    "stdout_sha256": "e09a9aeb8e105b75efac9086d5b60717cc3c605078108c17f193e323724adb9e"
+  },
+  {
+    "label": "cli-text",
+    "argv": [
+      "/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/reviewer/venv/bin/python",
+      "-m",
+      "minigenesis",
+      "--config",
+      "examples/v0.1/s2-resource-world.yaml"
+    ],
+    "exit": 0,
+    "stdout_sha256": "82b685cd30ea20e4a92714df91eba0da397b9275f7a162c0eb336217f45a125f"
+  },
+  {
+    "label": "cli-ledger-fault",
+    "argv": [
+      "/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/reviewer/venv/bin/python",
+      "-c",
+      "from minigenesis.world import World\nfrom minigenesis.cli import main\noriginal=World.inject\ndef fault(self):\n original(self)\n self.ledger.cumulative_external_inflow+=1\nWorld.inject=fault\nraise SystemExit(main(['--config','examples/v0.1/s2-resource-world.yaml','--output-format','json']))\n"
+    ],
+    "exit": 1,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

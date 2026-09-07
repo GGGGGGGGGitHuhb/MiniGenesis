@@ -4,8 +4,14 @@
 
 - Version: `V0.1 Deterministic World`
 - Stage: `S2 Resource World and Lifecycle`
-- Status: `Draft`
+- Status: `Approved`
 - Date: `2026-08-24`
+- Last revised: `2026-09-07`
+- Decision package: `docs/leader/reports/V0.1/S2-report-001.md`
+- Approval authority: 用户 / PM，本线程 S2 开发目标中的明确“批准”
+- Approval date: `2026-09-07`
+- Approval record: `docs/leader/reports/V0.1/S2-report-002.md`
+- Approved pre-metadata SHA-256: `42219a92f4a1a68c4a4e2cb3a6d329a73fd6698fd2ffefe0153dbbf8494ab9d6`
 - Governing design: `docs/leader/designs/V0.1/S2-design.md`
 - Prerequisite evidence: S1 Reviewer conclusion is `PASS` or approved `PASS WITH DEBT`
 - Applicable reworks: 无
@@ -81,7 +87,8 @@ Method:
 Evidence:
 
 - 阶段顺序对应的代码位置；
-- 中间状态测试与结果；
+- 中间状态测试与结果，明确全部意图先生成、再顺序结算；
+- 资源竞争耗尽后后续 HARVEST 仍扣成本，以及支付后暂时零能量仍完成获取的结果；
 - 死亡边界测试。
 
 Pass condition:
@@ -104,7 +111,7 @@ Method:
 python -m pytest -k "action or harvest or wait"
 ```
 
-覆盖空资源、资源少于 harvest、刚好足够、充足资源和无法支付动作成本。
+覆盖空资源、资源少于 harvest、刚好足够、充足资源、零 harvest、无法支付动作成本、刚好付清成本后获取，以及 invalid_action/unknown_agent/dead_agent。检查正常 insufficient_energy 继续运行，内部非法请求在 tick 管线中终止且无部分状态转移。
 
 Evidence:
 
@@ -144,7 +151,7 @@ Pass condition:
 - 每个小型场景满足设计恒等式；
 - 动作/代谢成本进入 dissipated；
 - 年龄死亡剩余能量返回资源池；
-- 故障注入使运行失败且指出不平 tick。
+- 故障注入使运行失败且指出目标 tick 和账本科目；CLI 退出 1、stdout 为空，失败 tick 不增加计数，后续 step/run 和成功摘要均被拒绝。
 
 Failure severity: `Blocker`。
 
@@ -188,7 +195,7 @@ Method:
 python -m pytest -k "scheduler or determinism"
 ```
 
-独立运行 S2 示例两次并逐字节比较 JSON；使用至少两个 seed 运行有资源竞争的配置。
+独立运行 S2 示例两次并逐字节比较 JSON；使用至少两个 seed 运行有资源竞争的配置，记录实际出现不同调度的 seed 对，不要求任意两个 seed 均不同。按设计 REQ-07 的准确字段顺序和 v2 schema 独立重算 digest，比较小场景逐 tick 的只读快照、调度和 RNG 状态。测试底层容器排列变化、重复读取快照、S2 A-B-A 及 S1/S2 混合运行；0/1 个 Agent 调度不消费 RNG。
 
 Evidence:
 
@@ -206,7 +213,7 @@ Failure severity: `Blocker`。
 
 ### RV-07：稳定性、资源上限与回归
 
-Source: `REQ-01`、`REQ-06`、`REQ-07`、`AC-06`
+Source: `REQ-01`、`REQ-03`、`REQ-06`、`REQ-07`、`AC-06`
 
 Required: Yes
 
@@ -217,12 +224,14 @@ python -m pytest
 python -m pytest -m slow
 ```
 
-Reviewer 还应检查十万 tick 测试不只是 mock 掉主循环，并比较运行前后所保留历史的规模。
+Reviewer 必须实际执行设计第 8 节两个十万 tick 场景，核对长寿 Agent 场景每一步发生获取/代谢，直到末 tick 才年龄死亡；不允许 mock 掉主循环。使用在线断言和累计计数，不让测试完整轨迹掩盖产品内存观察。
+
+配置验证逐项覆盖 REQ-01 的最小值、最大值、超出一单位、bool/float/string/null，world/agent 缺一、未知/重复字段和不安全标签；乘积 1_000_000 接受、超出拒绝，输入边界验证无需实际运行最大负载。验证 S1 原有 60 项测试与 CLI v1 精确输出保持，不得删除或削弱旧断言。
 
 Evidence:
 
 - 完整与 slow 测试结果；
-- 十万 tick 的最终摘要、耗时和内存/对象历史观察；
+- 两个十万 tick 的最终摘要、有效动作/代谢计数、耗时和 1000/10000/100000 tick 内存/保留容器观察；
 - 超限 `initial_count` 与 `max_ticks` 拒绝结果；
 - S1 测试结果。
 
@@ -263,7 +272,7 @@ Failure severity: `Major`；引入宿主代码执行或破坏长期边界时为 
 
 ### RV-09：文档与状态
 
-Source: `AC-06`、设计文档影响
+Source: `REQ-01`、`REQ-07`、`AC-06`、设计文档影响
 
 Required: Yes
 
@@ -281,7 +290,7 @@ Evidence:
 
 Pass condition:
 
-- README 只描述实际接受能力；
+- README 清楚区分已实现待验收的 S2 和已接受的 S1，最终接受后再同步 S2 状态；
 - V0.1 仅在 S1、S2 均满足接受规则后标为 `Completed`；
 - 未接受后续版本保持 `Planned`。
 
@@ -289,7 +298,7 @@ Failure severity: `Major`；仅有轻微文字不一致时为 `Minor`。
 
 ## 4. 必需测试
 
-Reviewer 必须从仓库根目录执行：
+以下为计划验证，尚未执行 S2 测试。Reviewer 在独立隔离环境中，从当前仓库根执行 `python -m pip install -e ".[dev]"`，确认安装路径和 Python/依赖版本后执行：
 
 ```powershell
 python -m pytest
@@ -346,6 +355,16 @@ V0.1 不承诺共享世界的并发访问，因此不要求并发正确性测试
 
 评审结果应新建为 `docs/reviewer/reports/V0.1/S2-report-001.md`；后续重评递增序号，不覆盖历史。本次请求不创建评审报告。
 
-## 10. 修订记录
+## 10. 追踪与证据要求
+
+采用 S2 Design 第 11.1 节的 REQ/AC/RV 表，不新增设计外需求。RV-07 同时覆盖 REQ-03 的实际十万 tick 调度和无界历史风险。全部 RV 必需；任一缺少关键动态证据均不得 PASS。失败记录在 S2 Reviewer 报告中，包含 REQ/AC/RV、严重性、复现步骤、观察和所需返工。
+
+S1 前置依据为 `docs/reviewer/reports/V0.1/S1-report-001.md` 的 PASS 及 `docs/leader/reports/V0.1/S1-report-004.md` 的 Completed；2026-09-07 合并为 `df98562`。这些不是 S2 验收证据。
+
+## 11. 修订记录
 
 - 2026-08-24：创建初稿；重点覆盖 tick 顺序、独立账本核算、生命周期、确定性、十万 tick 稳定性和范围控制。
+
+- 2026-09-07：同步 S2 Draft 的兼容、配置边界、阶段顺序、错误合同、v2 字节校验、逐 tick 证据及两个长运行场景；保持全部 RV 必需，未执行验收。
+
+- 2026-09-07：用户批准 S2-report-001 决策包；记录批准日期、权威及批准前哈希，状态改为 Approved。技术正文与验收要求保持原批准基线；批准原文见 S2-report-002。

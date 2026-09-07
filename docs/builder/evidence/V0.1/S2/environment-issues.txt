@@ -1,0 +1,5 @@
+Observed setup history (transcribed from tool outputs; raw pytest failures also kept):
+1. Ordinary native command launch: Failed to create unified exec process: No such file or directory (os error 2). Corrected to the parent-supplied /bin/sh login=false per-command escalated route.
+2. /usr/bin/python3.12 -m venv build/s2-execution/builder/venv: ensurepip is not available. The workspace venv remained usable as an isolated interpreter; official PyPA get-pip.py installed pip into it. No apt/system package changes.
+3. Early pytest while installation still live: No module named pytest. m1-s1-regression.log retained; setup session subsequently completed exit 0.
+4. Default pytest fd capture failed before collection in _pytest/capture.py, self.tmpfile.truncate(): FileNotFoundError [Errno 2] No such file or directory. m1-final.log and m2.log retain exact traces. Corrected all succeeding pytest runs to --capture=sys with workspace-local TMPDIR and pytest basetemp/cache. No assertions/tests were removed.

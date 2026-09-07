@@ -24,3 +24,4 @@ where = ["src"]
 addopts = "-ra"
 testpaths = ["tests"]
 
+markers = ["slow: real 100000-tick resource-world stability tests"]

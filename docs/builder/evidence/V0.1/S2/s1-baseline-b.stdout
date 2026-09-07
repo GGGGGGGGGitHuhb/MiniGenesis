@@ -1,0 +1,1 @@
+{"schema_version":"minigenesis.summary.v1","experiment_name":"s1-baseline","seed":1,"rng_implementation":"python.random.Random/MT19937","requested_ticks":10,"completed_ticks":10,"status":"completed","digest":"sha256:93deab1c067673d192661637a2938bd919c768a8392d69d3513cf32fa10f12cb"}

@@ -4,7 +4,7 @@
 
 MiniGenesis 面向数字演化实验，目标是构造一个小型、可复现、可审计的数字培养皿。系统只定义资源、时间、动作、遗传和局部交互等底层规则；宏观行为必须来自个体执行、繁殖、变异和选择的累计结果。
 
-当前 `V0.1/S1 Reproducible Experiment Baseline` 已实现并经独立 Reviewer `PASS`；`V0.1` 仍在进行中，下一执行焦点是尚未实现或验收的 `V0.1/S2 Resource World and Lifecycle`。
+当前 `V0.1` 已完成：S1 与 S2 均实现并经独立 Reviewer `PASS`，收尾依据见 `docs/leader/reports/V0.1/S2-report-003.md`。下一规划阶段为尚未实施的 `V0.2/S1`；V0.2 及以后保持 `Planned`。
 
 ## 2. 状态定义
 
@@ -55,7 +55,7 @@ MiniGenesis 面向数字演化实验，目标是构造一个小型、可复现�
 
 ### V0.1 Deterministic World
 
-Status: `In Progress`
+Status: `Completed`
 
 Prerequisites:
 
@@ -82,7 +82,7 @@ Current-version non-goals:
 Stage breakdown:
 
 - `S1 Reproducible Experiment Baseline` — `Completed`：建立项目入口、配置、集中 RNG、模拟时钟、确定性摘要和测试基线；详细设计见 `docs/leader/designs/V0.1/S1-design.md`，接受证据见 `docs/reviewer/reports/V0.1/S1-report-001.md`（`PASS`）。
-- `S2 Resource World and Lifecycle` — `Planned`：加入无空间资源池、Agent、确定性调度、资源获取、代谢、衰老、死亡和守恒账本；详细设计见 `docs/leader/designs/V0.1/S2-design.md`。
+- `S2 Resource World and Lifecycle` — `Completed`：加入无空间资源池、Agent、确定性调度、资源获取、代谢、衰老、死亡和守恒账本；详细设计见 `docs/leader/designs/V0.1/S2-design.md`，接受证据见 `docs/reviewer/reports/V0.1/S2-report-001.md`（`PASS`）。
 
 Completion criteria:
 
@@ -294,3 +294,5 @@ V0.1/S1 实验基线
 
 - 2026-08-24：根据初始研究报告建立 `V0.1` 至 `V0.5` 的版本序列，将确定性世界、数字遗传、实验观测、通用交互和环境结构分离，避免后续能力提前进入首个版本。
 - 2026-08-25：根据 `docs/reviewer/reports/V0.1/S1-report-001.md` 的 `PASS` 同步事实状态：V0.1/S1 转为 `Completed`，V0.1 因 S2 尚未实现或验收而转为 `In Progress`；未改变范围、目标或阶段顺序。
+
+- 2026-09-07：依据 S2 Reviewer Report 001 的 PASS 和 Leader Report 003 同步 S2、V0.1 为 Completed；无遗留债务，V0.2+ 保持 Planned，目标、范围与阶段顺序不变。

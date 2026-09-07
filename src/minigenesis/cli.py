@@ -15,7 +15,7 @@ from .summary import build_summary, canonical_output_bytes
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="python -m minigenesis",
-        description="Run a finite deterministic MiniGenesis empty-world experiment.",
+        description="Run a finite deterministic MiniGenesis experiment.",
     )
     parser.add_argument(
         "--config",
@@ -42,6 +42,13 @@ def execute(config: ExperimentConfig) -> dict[str, Any]:
 
 
 def _text_output(summary: dict[str, Any]) -> str:
+    if "state" in summary:
+        state = summary["state"]
+        return (f"Experiment {summary['experiment_name']!r} completed "
+                f"{summary['completed_ticks']}/{summary['requested_ticks']} ticks; "
+                f"resource={state['world_resource']}; living={state['living_count']}; "
+                f"dead={state['dead_count']}; living_energy={state['living_agent_energy']}; "
+                f"ledger_valid={state['ledger']['valid']}; {summary['digest']}")
     return (
         f"Experiment {summary['experiment_name']!r} completed "
         f"{summary['completed_ticks']}/{summary['requested_ticks']} ticks "

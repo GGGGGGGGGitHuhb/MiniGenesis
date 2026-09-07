@@ -47,6 +47,35 @@ _UniqueKeySafeLoader.add_constructor(
 )
 
 
+def _integer(value: Any, low: int, high: int, path: str) -> None:
+    if type(value) is not int or not low <= value <= high:
+        raise ConfigError(f"{path}: expected an integer in {low}..{high}")
+
+
+@dataclass(frozen=True, slots=True)
+class WorldConfig:
+    initial_resource: int
+    resource_inflow_per_tick: int
+    harvest_amount: int
+    action_cost: int
+    metabolism_cost: int
+
+    def __post_init__(self) -> None:
+        for name in self.__dataclass_fields__:
+            _integer(getattr(self, name), 0, 1_000_000, f"world.{name}")
+
+
+@dataclass(frozen=True, slots=True)
+class AgentConfig:
+    initial_count: int
+    initial_energy: int
+    max_age: int
+
+    def __post_init__(self) -> None:
+        for name, upper in (("initial_count", 1_000), ("initial_energy", 1_000_000), ("max_age", 100_000)):
+            _integer(getattr(self, name), 1, upper, f"agent.{name}")
+
+
 @dataclass(frozen=True, slots=True)
 class ExperimentConfig:
     """Normalized immutable input for one isolated experiment run."""
@@ -54,6 +83,23 @@ class ExperimentConfig:
     name: str
     seed: int
     max_ticks: int
+    world: WorldConfig | None = None
+    agent: AgentConfig | None = None
+
+    def __post_init__(self) -> None:
+        if (self.world is None) != (self.agent is None):
+            raise ConfigError("world and agent must be supplied together")
+        if self.world is not None:
+            if not isinstance(self.name, str) or not self.name.strip():
+                raise ConfigError("experiment.name: expected a non-empty string")
+            object.__setattr__(self, "name", self.name.strip())
+            if type(self.seed) is not int or self.seed < 0:
+                raise ConfigError("experiment.seed: expected a non-negative integer")
+            if not isinstance(self.world, WorldConfig) or not isinstance(self.agent, AgentConfig):
+                raise ConfigError("world and agent must be validated configuration objects")
+            _integer(self.max_ticks, 1, MAX_TICKS, "experiment.max_ticks")
+            if self.max_ticks * self.agent.initial_count > 1_000_000:
+                raise ConfigError("max_ticks * initial_count must not exceed 1000000")
 
 
 def _require_exact_keys(
@@ -72,7 +118,8 @@ def _require_exact_keys(
 def _normalize(document: Any) -> ExperimentConfig:
     if not isinstance(document, dict):
         raise ConfigError("configuration root: expected a mapping")
-    _require_exact_keys(document, {"experiment"}, "configuration root")
+    expected = {"experiment", "world", "agent"} if "world" in document or "agent" in document else {"experiment"}
+    _require_exact_keys(document, expected, "configuration root")
 
     experiment = document["experiment"]
     if not isinstance(experiment, dict):
@@ -100,7 +147,15 @@ def _normalize(document: Any) -> ExperimentConfig:
     if not 1 <= max_ticks <= MAX_TICKS:
         raise ConfigError(f"experiment.max_ticks: must be in 1..{MAX_TICKS}")
 
-    return ExperimentConfig(name=name, seed=seed, max_ticks=max_ticks)
+    extra = {}
+    if "world" in document:
+        for section, cls in (("world", WorldConfig), ("agent", AgentConfig)):
+            value = document[section]
+            if not isinstance(value, dict):
+                raise ConfigError(f"{section}: expected a mapping")
+            _require_exact_keys(value, set(cls.__dataclass_fields__), section)
+            extra[section] = cls(**value)
+    return ExperimentConfig(name=name, seed=seed, max_ticks=max_ticks, **extra)
 
 
 def load_config(path: str | Path) -> ExperimentConfig:

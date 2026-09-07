@@ -1,0 +1,38 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+cachedir: build/s2-execution/reviewer/cache/targeted
+rootdir: /mnt/e/01_Projects/VSCode/MiniGenesis
+configfile: pyproject.toml
+testpaths: tests
+collected 190 items / 161 deselected / 29 selected
+
+tests/test_lifecycle.py .............                                    [ 44%]
+tests/test_s2_config.py ................                                 [100%]
+
+====================== 29 passed, 161 deselected in 2.94s ======================
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+cachedir: build/s2-execution/reviewer/cache/targeted
+rootdir: /mnt/e/01_Projects/VSCode/MiniGenesis
+configfile: pyproject.toml
+testpaths: tests
+collected 190 items / 124 deselected / 66 selected
+
+tests/test_lifecycle.py ........................                         [ 36%]
+tests/test_s2_config.py ........................................         [ 96%]
+tests/test_world_determinism.py .                                        [ 98%]
+tests/test_world_stability.py .                                          [100%]
+
+===================== 66 passed, 124 deselected in 14.48s ======================
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+cachedir: build/s2-execution/reviewer/cache/targeted
+rootdir: /mnt/e/01_Projects/VSCode/MiniGenesis
+configfile: pyproject.toml
+testpaths: tests
+collected 190 items / 173 deselected / 17 selected
+
+tests/test_determinism.py ..........                                     [ 58%]
+tests/test_world_determinism.py .......                                  [100%]
+
+====================== 17 passed, 173 deselected in 1.66s ======================

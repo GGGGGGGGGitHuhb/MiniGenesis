@@ -1,0 +1,507 @@
+{
+  "seed11": [
+    [
+      {
+        "order": [
+          0,
+          2,
+          1
+        ],
+        "state": {
+          "tick": 1,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 20,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 1,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 7,
+              "age": 1,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 6,
+              "age": 1,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 7,
+              "age": 1,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          2,
+          0,
+          1
+        ],
+        "state": {
+          "tick": 2,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 21,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 2,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 7,
+              "age": 2,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 6,
+              "age": 2,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 8,
+              "age": 2,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "state": {
+          "tick": 3,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 22,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 3,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 7,
+              "age": 3,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 6,
+              "age": 3,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 9,
+              "age": 3,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          1,
+          0,
+          2
+        ],
+        "state": {
+          "tick": 4,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 23,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 4,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 7,
+              "age": 4,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 7,
+              "age": 4,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 9,
+              "age": 4,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "state": {
+          "tick": 5,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 24,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 5,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 7,
+              "age": 5,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 7,
+              "age": 5,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 10,
+              "age": 5,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          2,
+          0,
+          1
+        ],
+        "state": {
+          "tick": 6,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 25,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 6,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 7,
+              "age": 6,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 7,
+              "age": 6,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 11,
+              "age": 6,
+              "alive": true
+            }
+          ]
+        }
+      }
+    ],
+    "{\"schema_version\":\"minigenesis.summary.v2\",\"experiment_name\":\"review\",\"seed\":11,\"rng_implementation\":\"python.random.Random/MT19937\",\"requested_ticks\":6,\"completed_ticks\":6,\"status\":\"completed\",\"config\":{\"world\":{\"initial_resource\":1,\"resource_inflow_per_tick\":1,\"harvest_amount\":1,\"action_cost\":0,\"metabolism_cost\":0},\"agent\":{\"initial_count\":3,\"initial_energy\":6,\"max_age\":10}},\"state\":{\"tick\":6,\"world_resource\":0,\"living_count\":3,\"dead_count\":0,\"living_agent_energy\":25,\"ledger\":{\"initial_resource\":1,\"initial_agent_energy\":18,\"cumulative_external_inflow\":6,\"cumulative_dissipated_energy\":0,\"valid\":true},\"agents\":[{\"id\":0,\"energy\":7,\"age\":6,\"alive\":true},{\"id\":1,\"energy\":7,\"age\":6,\"alive\":true},{\"id\":2,\"energy\":11,\"age\":6,\"alive\":true}]},\"digest\":\"sha256:d9822fd519c6fb9574fec4077dccc708a9515d0219e5d961860f7702f7a8fa6a\"}\n"
+  ],
+  "seed12": [
+    [
+      {
+        "order": [
+          0,
+          2,
+          1
+        ],
+        "state": {
+          "tick": 1,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 20,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 1,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 7,
+              "age": 1,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 6,
+              "age": 1,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 7,
+              "age": 1,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "state": {
+          "tick": 2,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 21,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 2,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 8,
+              "age": 2,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 6,
+              "age": 2,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 7,
+              "age": 2,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "state": {
+          "tick": 3,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 22,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 3,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 8,
+              "age": 3,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 6,
+              "age": 3,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 8,
+              "age": 3,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          2,
+          1,
+          0
+        ],
+        "state": {
+          "tick": 4,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 23,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 4,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 8,
+              "age": 4,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 6,
+              "age": 4,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 9,
+              "age": 4,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          0,
+          2,
+          1
+        ],
+        "state": {
+          "tick": 5,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 24,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 5,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 9,
+              "age": 5,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 6,
+              "age": 5,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 9,
+              "age": 5,
+              "alive": true
+            }
+          ]
+        }
+      },
+      {
+        "order": [
+          0,
+          1,
+          2
+        ],
+        "state": {
+          "tick": 6,
+          "world_resource": 0,
+          "living_count": 3,
+          "dead_count": 0,
+          "living_agent_energy": 25,
+          "ledger": {
+            "initial_resource": 1,
+            "initial_agent_energy": 18,
+            "cumulative_external_inflow": 6,
+            "cumulative_dissipated_energy": 0,
+            "valid": true
+          },
+          "agents": [
+            {
+              "id": 0,
+              "energy": 10,
+              "age": 6,
+              "alive": true
+            },
+            {
+              "id": 1,
+              "energy": 6,
+              "age": 6,
+              "alive": true
+            },
+            {
+              "id": 2,
+              "energy": 9,
+              "age": 6,
+              "alive": true
+            }
+          ]
+        }
+      }
+    ],
+    "{\"schema_version\":\"minigenesis.summary.v2\",\"experiment_name\":\"review\",\"seed\":12,\"rng_implementation\":\"python.random.Random/MT19937\",\"requested_ticks\":6,\"completed_ticks\":6,\"status\":\"completed\",\"config\":{\"world\":{\"initial_resource\":1,\"resource_inflow_per_tick\":1,\"harvest_amount\":1,\"action_cost\":0,\"metabolism_cost\":0},\"agent\":{\"initial_count\":3,\"initial_energy\":6,\"max_age\":10}},\"state\":{\"tick\":6,\"world_resource\":0,\"living_count\":3,\"dead_count\":0,\"living_agent_energy\":25,\"ledger\":{\"initial_resource\":1,\"initial_agent_energy\":18,\"cumulative_external_inflow\":6,\"cumulative_dissipated_energy\":0,\"valid\":true},\"agents\":[{\"id\":0,\"energy\":10,\"age\":6,\"alive\":true},{\"id\":1,\"energy\":6,\"age\":6,\"alive\":true},{\"id\":2,\"energy\":9,\"age\":6,\"alive\":true}]},\"digest\":\"sha256:614c0e077d7f0dde8024ecd4ecf3496aa2b18dd71ebfa0d730e8ee7780b09658\"}\n"
+  ],
+  "aba_equal": true,
+  "reversed_equal": true,
+  "mixed_equal": true
+}

@@ -1,0 +1,6 @@
+src/minigenesis/scheduler.py:1:"""Run-scoped ordering without state mutation or action execution."""
+src/minigenesis/rng.py:9:RNG_IMPLEMENTATION = "python.random.Random/MT19937"
+src/minigenesis/rng.py:21:        self._random = random.Random(seed)
+src/minigenesis/rng.py:30:        return self._random.random()
+src/minigenesis/rng.py:35:        return self._random.getstate()
+src/minigenesis/rng.py:40:        self._random.shuffle(values)
