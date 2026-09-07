@@ -1,0 +1,4 @@
+experiment:
+  name: s1-baseline
+  seed: 1
+  max_ticks: 10
