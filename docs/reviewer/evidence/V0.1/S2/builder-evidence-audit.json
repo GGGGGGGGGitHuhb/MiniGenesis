@@ -1,0 +1,314 @@
+[
+  {
+    "path": "docs/builder/evidence/V0.1/S2/bootstrap.log",
+    "bytes": 346,
+    "sha256": "cfc88f0f421566e70a762116cbdfd368c6e479c807375c000a53ef8e6d84f596",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/cli-validation.log",
+    "bytes": 4133,
+    "sha256": "c8c03d88eeaad8d83760c39a48a91bff13f37c1eea2d910790789a9a67481dad",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/competition-trajectories.json",
+    "bytes": 10008,
+    "sha256": "8e16cc569f7b4bf52f101263bbee66f53a19c0ed921081b00492770a49f7e626",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/environment-issues.txt",
+    "bytes": 1009,
+    "sha256": "1b01cb10d077806f5d7ee752fa84e864f75ac78f8c8367ab270e194033c9b302",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/full-001.log",
+    "bytes": 4239,
+    "sha256": "a6a48c5c9731797d800fd4f9ee246c7e94d6722d0cc46fc674ed28ffef5001c8",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/full-final.log",
+    "bytes": 4239,
+    "sha256": "d8f33b6b1de11beb38f492834570e2d634649839fb8bb1a51da0f75ab01dd502",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/install.log",
+    "bytes": 2909,
+    "sha256": "7596b849c2400dcd73cf2c46234c490378bb2100305e4379d804c117c8509516",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/ledger-fault.stderr",
+    "bytes": 247,
+    "sha256": "e66c5994ee84ec290d0ec5e71ff1303edf445b8de205ae81ba146a0bbd5dc0f9",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/ledger-fault.stdout",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/m1-final.log",
+    "bytes": 4209,
+    "sha256": "6907747c1fcc2acd4b70c42823825b5966e0e706426cf195e6745cd9dbf42049",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/m1-s1-regression.log",
+    "bytes": 105,
+    "sha256": "744c3c08c3aadcc91c7842a938cd0713adb5bffec39c5769fb60153057bcfe0e",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/m1-sys.log",
+    "bytes": 928,
+    "sha256": "85d64601ab5316745395a2259212dd3ce67a2ff81bebc97ea4cba7eb41fd3f75",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/m2.log",
+    "bytes": 4209,
+    "sha256": "1c7ea3f5d57f0070bc653d2c1b97843bfce226f595d861ab8a51b297b5ab4cc4",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/m23-sys.log",
+    "bytes": 527,
+    "sha256": "7498db98e47fd8ca94bf136d2f53913ddd880a361805d161bdb3e933d4997078",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s1-baseline-a.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s1-baseline-a.stdout",
+    "bytes": 283,
+    "sha256": "4de55827ebbd9719a6bc42d8f426cf72307a0172603c3ba0090c2bbe166f6b34",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s1-baseline-b.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s1-baseline-b.stdout",
+    "bytes": 283,
+    "sha256": "4de55827ebbd9719a6bc42d8f426cf72307a0172603c3ba0090c2bbe166f6b34",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s2-resource-world-a.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s2-resource-world-a.stdout",
+    "bytes": 857,
+    "sha256": "e09a9aeb8e105b75efac9086d5b60717cc3c605078108c17f193e323724adb9e",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s2-resource-world-b.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s2-resource-world-b.stdout",
+    "bytes": 857,
+    "sha256": "e09a9aeb8e105b75efac9086d5b60717cc3c605078108c17f193e323724adb9e",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s2-text.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/s2-text.stdout",
+    "bytes": 194,
+    "sha256": "82b685cd30ea20e4a92714df91eba0da397b9275f7a162c0eb336217f45a125f",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/slow-final.log",
+    "bytes": 3548,
+    "sha256": "8ac1f06330e28a0592e9c824b6fd502d7ba1abfd7eca4b20758f251f439f46a6",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/evidence/V0.1/S2/validate.py",
+    "bytes": 4099,
+    "sha256": "c9e3645b1e3526ab5ee3c7ccfca1f937eb74a9489a061be63feb81875fc70849",
+    "matches": true
+  },
+  {
+    "path": "README.md",
+    "bytes": 8447,
+    "sha256": "9651c4000b38ac29e51460def5fccedfc03065a4dbfbd0b03dde969384abbbb3",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/breakdowns/V0.1/S2-breakdown.md",
+    "bytes": 1341,
+    "sha256": "e282718d33c08c5d012c31c618df70bb69dc5ea17edb175ab640941c2cade57a",
+    "matches": true
+  },
+  {
+    "path": "docs/builder/reports/V0.1/S2-report-001.md",
+    "bytes": 16905,
+    "sha256": "9538f9b06a6ac7c4046f3ca373b54efe22ab7539c4d0ebd032d10a588c59042f",
+    "matches": true
+  },
+  {
+    "path": "examples/v0.1/s2-resource-world.yaml",
+    "bytes": 245,
+    "sha256": "77466d0d016239ddad7197ff62765f335253eea9f7121e3ad11a48d95916728a",
+    "matches": true
+  },
+  {
+    "path": "pyproject.toml",
+    "bytes": 544,
+    "sha256": "f79e488001df0f6989dc2785a6c483fd68d5357eb4915413347a026dbd808677",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/__init__.py",
+    "bytes": 417,
+    "sha256": "464ac4fafcc87c4a2cc49b2a63c4747093be48f2f318372a1c63a8f07be339c9",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/__main__.py",
+    "bytes": 138,
+    "sha256": "0f6603bb10ca644199c4af5e3b8a6f637025f62641eb5a2f91a1fb64655a2268",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/actions.py",
+    "bytes": 470,
+    "sha256": "df1d252efe4756d67fa6b024425d858512f4c5d7ff13335657845dbf43bfeac4",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/agent.py",
+    "bytes": 415,
+    "sha256": "12bab7df21d6fb7b3eb1a1a34de87d4f2d18db1a4bfc002e3b738e9c3bd361fb",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/cli.py",
+    "bytes": 2590,
+    "sha256": "00f0a0a7ef63acb17bfdcb078adec388045ab4d42abcf5e309e480a010a96cc7",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/config.py",
+    "bytes": 6653,
+    "sha256": "8f39e74a1fe08263a9794fc30be4c12de64fe9e2f9bc89755695c0d120684131",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/ledger.py",
+    "bytes": 1289,
+    "sha256": "10f69af2b0e6de4d5340b31e3e489ead11ab1f44447bea1f0cf150c8256a29f4",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/rng.py",
+    "bytes": 1104,
+    "sha256": "2a19563830ca4acb0f3d39864cbbc504bc1ffe0f583b33b728238b173e6f5ac2",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/scheduler.py",
+    "bytes": 401,
+    "sha256": "490566712c5dc4c05b41d575526044eb7107e869d64e8b0cf4f5b29243d47dd2",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/simulation.py",
+    "bytes": 3705,
+    "sha256": "a060fd9b732402643548576ddcef5cee7c00baa2e3e387eb59865204175f12ce",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/summary.py",
+    "bytes": 3761,
+    "sha256": "2763c7a254646bffb60aca1b8f18c8dcfb3828ed1f32a198af166ed64eb19a09",
+    "matches": true
+  },
+  {
+    "path": "src/minigenesis/world.py",
+    "bytes": 3085,
+    "sha256": "1c97045210bdfd5cad3b4fb1422b5f49e17e2b1ba235cf6efac636da56dd7c9e",
+    "matches": true
+  },
+  {
+    "path": "tests/test_cli.py",
+    "bytes": 5212,
+    "sha256": "ff0ded969e01af7d28a64450ef51c83959258634d1b36a6386e45cae3625370e",
+    "matches": true
+  },
+  {
+    "path": "tests/test_config.py",
+    "bytes": 4593,
+    "sha256": "cde5e63f788094f9551ad959808df4d5825d8bffa89003d34285ce9e5c10f0ce",
+    "matches": true
+  },
+  {
+    "path": "tests/test_determinism.py",
+    "bytes": 2052,
+    "sha256": "9b8c35884b1ca39b04c6569774399fbfb18d546110d672e791a4583813272de7",
+    "matches": true
+  },
+  {
+    "path": "tests/test_lifecycle.py",
+    "bytes": 8513,
+    "sha256": "00bc41d180576c4ef9d8acb1d5ea16e30bd1ef26ec8109397a0f4739eb604373",
+    "matches": true
+  },
+  {
+    "path": "tests/test_s2_config.py",
+    "bytes": 4313,
+    "sha256": "f49e3de9c4d889354b692802914c9899485b2419648e8031afbe6f9a3f65c4c6",
+    "matches": true
+  },
+  {
+    "path": "tests/test_simulation.py",
+    "bytes": 1408,
+    "sha256": "1dea3034ad77f48a7e0b9b23d43b614cba0959d404367e05223525f4db7bb3d3",
+    "matches": true
+  },
+  {
+    "path": "tests/test_summary.py",
+    "bytes": 2803,
+    "sha256": "536dff3ecd783c82443a9cad87305d4bbe45c243b514b378bd16cf5e4e721d7d",
+    "matches": true
+  },
+  {
+    "path": "tests/test_world_determinism.py",
+    "bytes": 5802,
+    "sha256": "a876b40e775f8e1ccdeeaf8a60dc334193b1947faf1a93e5edb1316d4cc53eb1",
+    "matches": true
+  },
+  {
+    "path": "tests/test_world_stability.py",
+    "bytes": 4096,
+    "sha256": "dd71e7944a67280d3aac58dc5699faa69b9b38d3e9413e03b9e2fbdf8268dbbb",
+    "matches": true
+  }
+]

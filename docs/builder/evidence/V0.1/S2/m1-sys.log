@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+cachedir: build/s2-execution/builder/cache/pytest
+rootdir: /mnt/e/01_Projects/VSCode/MiniGenesis
+configfile: pyproject.toml
+collected 145 items
+
+tests/test_config.py .......................                             [ 15%]
+tests/test_simulation.py .......                                         [ 20%]
+tests/test_summary.py ......                                             [ 24%]
+tests/test_cli.py ..............                                         [ 34%]
+tests/test_determinism.py ..........                                     [ 41%]
+tests/test_s2_config.py ................................................ [ 74%]
+.....................................                                    [100%]
+
+============================= 145 passed in 40.14s =============================

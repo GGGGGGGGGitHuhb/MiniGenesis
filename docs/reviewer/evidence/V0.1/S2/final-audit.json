@@ -1,0 +1,9 @@
+{
+  "reviewed_files_unchanged": 24,
+  "authority_hashes_unchanged": {
+    "docs/leader/designs/V0.1/S2-design.md": "66f25751ac6cf8ff1d281ab361ba309adff941f50179087c802d6437855c0af2",
+    "docs/reviewer/reviews/V0.1/S2-review.md": "9902653533263181b1b8dd2c3bfc1cac4970ec141a69518818ee97a3e9ae79a6"
+  },
+  "validation_chain_exit": 0,
+  "targeted_exit": 0
+}

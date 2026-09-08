@@ -1,0 +1,29 @@
+platform Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+python 3.12.3 (main, Jun 18 2025, 17:59:45) [GCC 13.3.0]
+executable /mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/builder/venv/bin/python
+package /mnt/e/01_Projects/VSCode/MiniGenesis/src/minigenesis/__init__.py
+pip 26.2.1
+PyYAML 6.0.3
+pytest 9.1.1
+setuptools isolated build dependency only
+minigenesis 0.1.0.dev0
+COMMAND ['/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/builder/venv/bin/python', '-m', 'minigenesis', '--config', 'examples/v0.1/s1-baseline.yaml', '--output-format', 'json']
+s1-baseline-a exit 0 stdout_sha256 4de55827ebbd9719a6bc42d8f426cf72307a0172603c3ba0090c2bbe166f6b34
+COMMAND ['/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/builder/venv/bin/python', '-m', 'minigenesis', '--config', 'examples/v0.1/s1-baseline.yaml', '--output-format', 'json']
+s1-baseline-b exit 0 stdout_sha256 4de55827ebbd9719a6bc42d8f426cf72307a0172603c3ba0090c2bbe166f6b34
+identical bytes; independent digest sha256:93deab1c067673d192661637a2938bd919c768a8392d69d3513cf32fa10f12cb
+JSON {"schema_version":"minigenesis.summary.v1","experiment_name":"s1-baseline","seed":1,"rng_implementation":"python.random.Random/MT19937","requested_ticks":10,"completed_ticks":10,"status":"completed","digest":"sha256:93deab1c067673d192661637a2938bd919c768a8392d69d3513cf32fa10f12cb"}
+COMMAND ['/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/builder/venv/bin/python', '-m', 'minigenesis', '--config', 'examples/v0.1/s2-resource-world.yaml', '--output-format', 'json']
+s2-resource-world-a exit 0 stdout_sha256 e09a9aeb8e105b75efac9086d5b60717cc3c605078108c17f193e323724adb9e
+COMMAND ['/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/builder/venv/bin/python', '-m', 'minigenesis', '--config', 'examples/v0.1/s2-resource-world.yaml', '--output-format', 'json']
+s2-resource-world-b exit 0 stdout_sha256 e09a9aeb8e105b75efac9086d5b60717cc3c605078108c17f193e323724adb9e
+identical bytes; independent digest sha256:da4da75ccc16e0b1d50bbc641ceedcfab4fe9ed00c06feae46e4b0b977992fc4
+JSON {"schema_version":"minigenesis.summary.v2","experiment_name":"s2-resource-world","seed":1,"rng_implementation":"python.random.Random/MT19937","requested_ticks":30,"completed_ticks":30,"status":"completed","config":{"world":{"initial_resource":100,"resource_inflow_per_tick":10,"harvest_amount":4,"action_cost":1,"metabolism_cost":1},"agent":{"initial_count":3,"initial_energy":10,"max_age":20}},"state":{"tick":30,"world_resource":310,"living_count":0,"dead_count":3,"living_agent_energy":0,"ledger":{"initial_resource":100,"initial_agent_energy":30,"cumulative_external_inflow":300,"cumulative_dissipated_energy":120,"valid":true},"agents":[{"id":0,"energy":0,"age":20,"alive":false},{"id":1,"energy":0,"age":20,"alive":false},{"id":2,"energy":0,"age":20,"alive":false}]},"digest":"sha256:da4da75ccc16e0b1d50bbc641ceedcfab4fe9ed00c06feae46e4b0b977992fc4"}
+COMMAND ['/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/builder/venv/bin/python', '-m', 'minigenesis', '--config', 'examples/v0.1/s2-resource-world.yaml']
+s2-text exit 0 stdout_sha256 82b685cd30ea20e4a92714df91eba0da397b9275f7a162c0eb336217f45a125f
+COMMAND ['/mnt/e/01_Projects/VSCode/MiniGenesis/build/s2-execution/builder/venv/bin/python', '-c', "from minigenesis.world import World\nfrom minigenesis.cli import main\noriginal = World.inject\ndef corrupt(world):\n    original(world)\n    world.resource += 1\nWorld.inject = corrupt\nraise SystemExit(main(['--config','examples/v0.1/s2-resource-world.yaml','--output-format','json']))\n"]
+ledger-fault exit 1 stdout_sha256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+stderr error: unexpected failure: ledger mismatch at tick 1: {'initial_resource': 100, 'initial_agent_energy': 30, 'cumulative_external_inflow': 10, 'world_resource': 99, 'living_agent_energy': 36, 'cumulative_dissipated_energy': 6}; left=140, right=141
+
+competition orders seed1 [[1, 2, 0], [2, 0, 1], [0, 2, 1], [0, 2, 1]] seed7 [[2, 0, 1], [2, 0, 1], [1, 2, 0], [2, 0, 1]] A-B-A equal True
+All CLI, digest, fault and trajectory assertions passed

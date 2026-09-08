@@ -1,0 +1,1 @@
+error: unexpected failure: ledger mismatch at tick 1: {'initial_resource': 100, 'initial_agent_energy': 30, 'cumulative_external_inflow': 11, 'world_resource': 98, 'living_agent_energy': 36, 'cumulative_dissipated_energy': 6}; left=141, right=140

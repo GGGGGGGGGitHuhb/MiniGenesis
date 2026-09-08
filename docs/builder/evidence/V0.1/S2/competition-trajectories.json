@@ -1,0 +1,500 @@
+[
+  [
+    {
+      "order": [
+        1,
+        2,
+        0
+      ],
+      "state": {
+        "tick": 1,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 26,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 1,
+          "cumulative_dissipated_energy": 6,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 8,
+            "age": 1,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 9,
+            "age": 1,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 9,
+            "age": 1,
+            "alive": true
+          }
+        ]
+      }
+    },
+    {
+      "order": [
+        2,
+        0,
+        1
+      ],
+      "state": {
+        "tick": 2,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 21,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 2,
+          "cumulative_dissipated_energy": 12,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 6,
+            "age": 2,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 7,
+            "age": 2,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 8,
+            "age": 2,
+            "alive": true
+          }
+        ]
+      }
+    },
+    {
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "state": {
+        "tick": 3,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 16,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 3,
+          "cumulative_dissipated_energy": 18,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 5,
+            "age": 3,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 5,
+            "age": 3,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 6,
+            "age": 3,
+            "alive": true
+          }
+        ]
+      }
+    },
+    {
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "state": {
+        "tick": 4,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 11,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 4,
+          "cumulative_dissipated_energy": 24,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 4,
+            "age": 4,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 3,
+            "age": 4,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 4,
+            "age": 4,
+            "alive": true
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "order": [
+        2,
+        0,
+        1
+      ],
+      "state": {
+        "tick": 1,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 26,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 1,
+          "cumulative_dissipated_energy": 6,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 9,
+            "age": 1,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 8,
+            "age": 1,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 9,
+            "age": 1,
+            "alive": true
+          }
+        ]
+      }
+    },
+    {
+      "order": [
+        2,
+        0,
+        1
+      ],
+      "state": {
+        "tick": 2,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 21,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 2,
+          "cumulative_dissipated_energy": 12,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 7,
+            "age": 2,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 6,
+            "age": 2,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 8,
+            "age": 2,
+            "alive": true
+          }
+        ]
+      }
+    },
+    {
+      "order": [
+        1,
+        2,
+        0
+      ],
+      "state": {
+        "tick": 3,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 16,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 3,
+          "cumulative_dissipated_energy": 18,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 5,
+            "age": 3,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 5,
+            "age": 3,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 6,
+            "age": 3,
+            "alive": true
+          }
+        ]
+      }
+    },
+    {
+      "order": [
+        2,
+        0,
+        1
+      ],
+      "state": {
+        "tick": 4,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 11,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 4,
+          "cumulative_dissipated_energy": 24,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 3,
+            "age": 4,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 3,
+            "age": 4,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 5,
+            "age": 4,
+            "alive": true
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "order": [
+        1,
+        2,
+        0
+      ],
+      "state": {
+        "tick": 1,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 26,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 1,
+          "cumulative_dissipated_energy": 6,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 8,
+            "age": 1,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 9,
+            "age": 1,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 9,
+            "age": 1,
+            "alive": true
+          }
+        ]
+      }
+    },
+    {
+      "order": [
+        2,
+        0,
+        1
+      ],
+      "state": {
+        "tick": 2,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 21,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 2,
+          "cumulative_dissipated_energy": 12,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 6,
+            "age": 2,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 7,
+            "age": 2,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 8,
+            "age": 2,
+            "alive": true
+          }
+        ]
+      }
+    },
+    {
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "state": {
+        "tick": 3,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 16,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 3,
+          "cumulative_dissipated_energy": 18,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 5,
+            "age": 3,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 5,
+            "age": 3,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 6,
+            "age": 3,
+            "alive": true
+          }
+        ]
+      }
+    },
+    {
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "state": {
+        "tick": 4,
+        "world_resource": 0,
+        "living_count": 3,
+        "dead_count": 0,
+        "living_agent_energy": 11,
+        "ledger": {
+          "initial_resource": 1,
+          "initial_agent_energy": 30,
+          "cumulative_external_inflow": 4,
+          "cumulative_dissipated_energy": 24,
+          "valid": true
+        },
+        "agents": [
+          {
+            "id": 0,
+            "energy": 4,
+            "age": 4,
+            "alive": true
+          },
+          {
+            "id": 1,
+            "energy": 3,
+            "age": 4,
+            "alive": true
+          },
+          {
+            "id": 2,
+            "energy": 4,
+            "age": 4,
+            "alive": true
+          }
+        ]
+      }
+    }
+  ]
+]

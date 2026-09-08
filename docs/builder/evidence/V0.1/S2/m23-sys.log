@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+cachedir: build/s2-execution/builder/cache/pytest
+rootdir: /mnt/e/01_Projects/VSCode/MiniGenesis
+configfile: pyproject.toml
+collected 30 items
+
+tests/test_lifecycle.py ........................                         [ 80%]
+tests/test_world_determinism.py ......                                   [100%]
+
+============================== 30 passed in 2.87s ==============================

@@ -1,0 +1,6 @@
+{
+  "error": "ledger mismatch at tick 2: {'initial_resource': 7, 'initial_agent_energy': 6, 'cumulative_external_inflow': 5, 'world_resource': 5, 'living_agent_energy': 6, 'cumulative_dissipated_energy': 6}; left=18, right=17",
+  "tick": 1,
+  "failed": true,
+  "snapshot_unchanged": true
+}

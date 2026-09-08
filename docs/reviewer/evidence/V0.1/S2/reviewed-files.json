@@ -1,0 +1,98 @@
+[
+  {
+    "path": "examples/v0.1/s1-baseline.yaml",
+    "sha256": "ac0b268e9cdb5a2628c1157375ddd1fd85f4ada92c730f78d4c096a4033a795d"
+  },
+  {
+    "path": "examples/v0.1/s2-resource-world.yaml",
+    "sha256": "77466d0d016239ddad7197ff62765f335253eea9f7121e3ad11a48d95916728a"
+  },
+  {
+    "path": "pyproject.toml",
+    "sha256": "f79e488001df0f6989dc2785a6c483fd68d5357eb4915413347a026dbd808677"
+  },
+  {
+    "path": "src/minigenesis/__init__.py",
+    "sha256": "464ac4fafcc87c4a2cc49b2a63c4747093be48f2f318372a1c63a8f07be339c9"
+  },
+  {
+    "path": "src/minigenesis/__main__.py",
+    "sha256": "0f6603bb10ca644199c4af5e3b8a6f637025f62641eb5a2f91a1fb64655a2268"
+  },
+  {
+    "path": "src/minigenesis/actions.py",
+    "sha256": "df1d252efe4756d67fa6b024425d858512f4c5d7ff13335657845dbf43bfeac4"
+  },
+  {
+    "path": "src/minigenesis/agent.py",
+    "sha256": "12bab7df21d6fb7b3eb1a1a34de87d4f2d18db1a4bfc002e3b738e9c3bd361fb"
+  },
+  {
+    "path": "src/minigenesis/cli.py",
+    "sha256": "00f0a0a7ef63acb17bfdcb078adec388045ab4d42abcf5e309e480a010a96cc7"
+  },
+  {
+    "path": "src/minigenesis/config.py",
+    "sha256": "8f39e74a1fe08263a9794fc30be4c12de64fe9e2f9bc89755695c0d120684131"
+  },
+  {
+    "path": "src/minigenesis/ledger.py",
+    "sha256": "10f69af2b0e6de4d5340b31e3e489ead11ab1f44447bea1f0cf150c8256a29f4"
+  },
+  {
+    "path": "src/minigenesis/rng.py",
+    "sha256": "2a19563830ca4acb0f3d39864cbbc504bc1ffe0f583b33b728238b173e6f5ac2"
+  },
+  {
+    "path": "src/minigenesis/scheduler.py",
+    "sha256": "490566712c5dc4c05b41d575526044eb7107e869d64e8b0cf4f5b29243d47dd2"
+  },
+  {
+    "path": "src/minigenesis/simulation.py",
+    "sha256": "a060fd9b732402643548576ddcef5cee7c00baa2e3e387eb59865204175f12ce"
+  },
+  {
+    "path": "src/minigenesis/summary.py",
+    "sha256": "2763c7a254646bffb60aca1b8f18c8dcfb3828ed1f32a198af166ed64eb19a09"
+  },
+  {
+    "path": "src/minigenesis/world.py",
+    "sha256": "1c97045210bdfd5cad3b4fb1422b5f49e17e2b1ba235cf6efac636da56dd7c9e"
+  },
+  {
+    "path": "tests/test_cli.py",
+    "sha256": "ff0ded969e01af7d28a64450ef51c83959258634d1b36a6386e45cae3625370e"
+  },
+  {
+    "path": "tests/test_config.py",
+    "sha256": "cde5e63f788094f9551ad959808df4d5825d8bffa89003d34285ce9e5c10f0ce"
+  },
+  {
+    "path": "tests/test_determinism.py",
+    "sha256": "9b8c35884b1ca39b04c6569774399fbfb18d546110d672e791a4583813272de7"
+  },
+  {
+    "path": "tests/test_lifecycle.py",
+    "sha256": "00bc41d180576c4ef9d8acb1d5ea16e30bd1ef26ec8109397a0f4739eb604373"
+  },
+  {
+    "path": "tests/test_s2_config.py",
+    "sha256": "f49e3de9c4d889354b692802914c9899485b2419648e8031afbe6f9a3f65c4c6"
+  },
+  {
+    "path": "tests/test_simulation.py",
+    "sha256": "1dea3034ad77f48a7e0b9b23d43b614cba0959d404367e05223525f4db7bb3d3"
+  },
+  {
+    "path": "tests/test_summary.py",
+    "sha256": "536dff3ecd783c82443a9cad87305d4bbe45c243b514b378bd16cf5e4e721d7d"
+  },
+  {
+    "path": "tests/test_world_determinism.py",
+    "sha256": "a876b40e775f8e1ccdeeaf8a60dc334193b1947faf1a93e5edb1316d4cc53eb1"
+  },
+  {
+    "path": "tests/test_world_stability.py",
+    "sha256": "dd71e7944a67280d3aac58dc5699faa69b9b38d3e9413e03b9e2fbdf8268dbbb"
+  }
+]

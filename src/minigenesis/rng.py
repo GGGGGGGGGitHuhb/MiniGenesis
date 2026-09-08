@@ -34,3 +34,7 @@ class RNGContext:
 
         return self._random.getstate()
 
+
+    def shuffle(self, values: list[Any]) -> None:
+        """Shuffle in place using only this run's random stream."""
+        self._random.shuffle(values)
